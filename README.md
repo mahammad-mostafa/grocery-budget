@@ -48,11 +48,11 @@ Optimized queries with `bullet` gem.
 - Registeration requires (`name` / `email` / `password`)
 - Navigation side menu with links (`Home` / `Account` / `Logout`)
 - Only registered users can access pages
-- Each category displays (`name` / `icon` / `total`)
-- Every category can contain several grocery items
-- Any grocery item can have multiple categories
+- Each group displays (`name` / `icon` / `total`)
+- Every group can contain several grocery items
+- Any grocery item can belong to multiple groups
 - Each grocery item displays (`name` / `amount`)
-- Users can add new category and new grocery item
+- Users can create new groups and new grocery items
 - Back navigation to the previous page
 
 <p align="right"><a href="#title">back to top</a></p>
@@ -73,7 +73,11 @@ You can easily download or fork this repository and work on it immadiately!
 ```
 bundle install
 ```
-- Create all required databases & table schemas with
+- Create all required databases with
+```
+rails db:create
+```
+- Create all table schemas with
 ```
 rails db:migrate
 ```
