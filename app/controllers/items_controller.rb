@@ -1,4 +1,5 @@
 class ItemController < ApplicationController
+  load_and_authorize_resource
   def create
     if @item.save
       redirect_to(group_path(@item.groups.first))
