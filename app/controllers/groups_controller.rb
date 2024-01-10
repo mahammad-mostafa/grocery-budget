@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  load_and_authorize_resource
   def create
     if @group.save
       redirect_to(group_path(@group))
