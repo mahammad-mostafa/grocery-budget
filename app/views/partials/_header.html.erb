@@ -1,0 +1,9 @@
+<header>
+  <%= link_to("<", @previous) unless @previous.nil? %>
+  <h1><%= @title.class == Hash ? @title[controller_name] : @title %></h1>
+  <% if @action.nil? %>
+    <button type="button">=</button>
+  <% else %>
+    <label for="action"><%= @action %></label>
+  <% end %>
+</header>
