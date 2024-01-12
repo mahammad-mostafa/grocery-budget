@@ -5,7 +5,7 @@ class Ability
 
     can(%i[create read], Group, user:)
     can(%i[create read], Item, user:)
-    can(%i[create read], GroupItem, group: { user: })
-    can(%i[create read], GroupItem, item: { user: })
+    can(%i[create read], GroupsItem, group: { user: })
+    can(%i[create read], GroupsItem, item: { user: })
   end
 end
