@@ -1,0 +1,8 @@
+<section>
+  <h2><%= @group.name %></h2>
+  <span>$<%= @group.items.reduce(0) { |total, element| total + element.amount } %></span>
+</section>
+<section>
+  <%= render(partial: "items/item", collection: @group.items) %>
+</section>
+<%= link_to("Add a new item", new_item_path) %>
