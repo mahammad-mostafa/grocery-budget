@@ -156,6 +156,7 @@ Like this project? Show your support by starring!
 # 🙏🏻 Acknowledgements
 
 I thank everyone at **Microverse** for guiding me through this project.
+Special thanks for [Gregoire Vella](https://www.behance.net/gregoirevella) who built the reference [design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding). 
 
 <p align="right"><a href="#title">back to top</a></p>
 
