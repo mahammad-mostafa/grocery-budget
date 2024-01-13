@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
   load_and_authorize_resource
   def index
+    @groups = Group.includes(:items).accessible_by(current_ability)
     resource_menu('Group list')
   end
 

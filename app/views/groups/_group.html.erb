@@ -4,6 +4,6 @@
     <div>
       <h2><%= group.name %></h2>
     </div>
-    <span>$<%= group.items.reduce(0) { |total, element| total + element.amount } %></span>
+    <span>$<%= group.total %></span>
   </a>
 </li>

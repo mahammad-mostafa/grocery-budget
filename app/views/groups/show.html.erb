@@ -1,6 +1,6 @@
 <section class="banner">
   <h2><%= @group.name %></h2>
-  <span>$<%= @group.items.reduce(0) { |total, element| total + element.amount } %></span>
+  <span>$<%= @group.total %></span>
 </section>
 <ul class="list">
   <%= @group.items.length.zero? ? render(partial: "partials/empty", locals: { name: "items" }) : render(partial: "items/item", collection: @group.items) %>
