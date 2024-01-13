@@ -1,0 +1,4 @@
+<section>
+  <%= @groups.length.zero? ? render(partial: "partials/empty", locals: { name: "groups" }) : render(partial: "group", collection: @groups) %>
+</section>
+<%= link_to("Add a new group", new_group_path) %>

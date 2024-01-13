@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GroceryBudget</title>
+    <title>Grocery Budget</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render("partials/header") unless current_page?(root_path) %>
+    <main>
+      <% if notice %><ul class="success"><li><%= notice %></li></ul><% end %>
+      <% if alert %><ul class="errors"><li><%= alert %></li></ul><% end %>
+      <%= yield %>
+    </main>
+    <%= render("partials/menu") if user_signed_in? %>
   </body>
 </html>

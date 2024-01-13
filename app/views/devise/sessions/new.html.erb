@@ -1,0 +1,5 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email (required)" %>
+  <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password (required)" %>
+  <%= f.submit "Login", id: "action" %>
+<% end %>

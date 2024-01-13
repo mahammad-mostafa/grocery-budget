@@ -1,0 +1,8 @@
+<article class="group">
+  <img src="<%= group.icon %>" alt="<%= group.name %>"/>
+  <div>
+    <h2><%= group.name %></h2>
+    <%= link_to("Details", group_path(group)) %>
+  </div>
+  <span>$<%= group.items.reduce(0) { |total, element| total + element.amount } %></span>
+</article>
