@@ -20,6 +20,13 @@
     <%= render("partials/menu") if user_signed_in? %>
   </body>
   <script>
-    const toggle = () => document.querySelector('menu').classList.toggle('visible');
+    const openMenu = () => {
+      document.querySelector('menu').classList.add('appear');
+      setTimeout(() => document.querySelector('menu').classList.add('visible'));
+    }
+    const closeMenu = () => {
+      document.querySelector('menu').classList.remove('visible');
+      setTimeout(() => document.querySelector('menu').classList.remove('appear'), 200);
+    }
   </script>
 </html>
