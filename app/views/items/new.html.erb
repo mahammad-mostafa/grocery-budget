@@ -1,9 +1,9 @@
 <%= render(partial: "partials/errors") %>
 <%= form_with(model: @item) do |form| %>
-  <%= form.text_field :name, autofocus: true, placeholder: "Name (required)" %>
+  <%= form.text_field :name, placeholder: "Name (required)" %>
   <%= form.number_field :amount, min: 1, placeholder: "Amount (required)" %>
-  <div>
-    <%= form.label :group_ids, "Groups (at least one required)" %>
+  <%= form.label :group_ids, "Groups (at least one required)" %>
+  <div class="grid">
     <%= form.collection_check_boxes :group_ids, Group.all, :id, :name %>
   </div>
   <%= form.submit "Save", id: "action" %>
