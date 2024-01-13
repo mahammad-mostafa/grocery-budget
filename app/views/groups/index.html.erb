@@ -1,4 +1,6 @@
-<section>
+<ul class="list">
   <%= @groups.length.zero? ? render(partial: "partials/empty", locals: { name: "groups" }) : render(partial: "group", collection: @groups) %>
+</ul>
+<section class="button">
+  <%= link_to("Add a new group", new_group_path) %>
 </section>
-<%= link_to("Add a new group", new_group_path) %>
