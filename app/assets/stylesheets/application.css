@@ -158,6 +158,7 @@ main {
 }
 
 menu {
+  opacity: 0;
   display: none;
   position: fixed;
   top: 0;
@@ -166,6 +167,7 @@ menu {
   color: var(--block-color);
   font: 2rem var(--title-font);
   background-color: var(--accent-color);
+  transition: opacity 0.2s ease;
 }
 
 nav {
@@ -204,10 +206,6 @@ nav {
 
 .errors {
   background-color: var(--error-color);
-}
-
-.visible {
-  display: block;
 }
 
 .menu {
@@ -273,11 +271,14 @@ nav {
 }
 
 .button {
+  opacity: 0;
   position: absolute;
   bottom: 0;
   inset-inline: 0;
   padding: 10px;
   background-color: var(--button-color);
+  transform: translateY(100%);
+  transition: all 0.5s ease;
 }
 
 .button a {
@@ -369,6 +370,18 @@ nav {
 .grid label {
   padding: 0;
   line-height: 25px;
+}
+
+.appear {
+  display: block;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.move {
+  transform: translateY(0);
 }
 
 @media only screen and (min-width: 768px) {
