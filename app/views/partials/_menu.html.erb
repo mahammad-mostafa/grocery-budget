@@ -1,7 +1,7 @@
 <menu>
   <nav>
     <ul class="menu">
-      <li><input type="button" onclick="toggle();"/></li>
+      <li><input type="button" onclick="closeMenu();"/></li>
       <li><img src="/assets/home.svg"/><%= link_to("Home", groups_path) %></li>
       <li><img src="/assets/account.svg"/><%= link_to("Account", edit_user_registration_path) %></li>
       <li><img src="/assets/logout.svg"/><%= link_to("Logout", destroy_user_session_path, data: { turbo_method: :delete }) %></li>
