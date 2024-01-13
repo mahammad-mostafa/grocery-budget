@@ -19,4 +19,7 @@
     </main>
     <%= render("partials/menu") if user_signed_in? %>
   </body>
+  <script>
+    const toggle = () => document.querySelector('menu').classList.toggle('visible');
+  </script>
 </html>
