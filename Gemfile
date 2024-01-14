@@ -8,6 +8,8 @@ gem 'devise', '~> 4.9'
 
 gem 'cancancan'
 
+gem 'rails-controller-testing'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.2'
 
@@ -55,6 +57,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri windows]
 
   gem 'bullet'
+  gem 'rspec-rails'
 end
 
 group :development do
