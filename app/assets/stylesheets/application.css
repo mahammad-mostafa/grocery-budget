@@ -395,6 +395,17 @@ nav {
     margin: auto;
   }
 
+  header a,
+  header input,
+  .menu input {
+    background-size: 30px;
+  }
+
+  .menu input,
+  .menu img {
+    width: 30px;
+  }
+
   .banner {
     width: 100%;
     padding: 10px 0;
