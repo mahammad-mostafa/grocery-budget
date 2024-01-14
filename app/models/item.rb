@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 100 }
   validates :amount, numericality: { only_integer: true, greater_than: 0 }
   validate :group_presence
   belongs_to :user, foreign_key: :author_id

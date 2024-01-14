@@ -1,6 +1,6 @@
 class Group < ApplicationRecord
-  validates :name, presence: true
-  validates :icon, presence: true
+  validates :name, presence: true, length: { maximum: 100 }
+  validates :icon, presence: true, length: { maximum: 100 }
   belongs_to :user
   has_many :groups_items
   has_many :items, -> { order(id: :desc) }, through: :groups_items
