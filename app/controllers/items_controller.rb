@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   load_and_authorize_resource
   def new
+    @groups = Group.accessible_by(current_ability)
     session[:previous] = groups_path if session[:previous].nil?
     resource_menu('New item', session[:previous], 'Save')
   end
