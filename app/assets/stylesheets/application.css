@@ -397,6 +397,12 @@ nav {
 
   header a,
   header input,
+  header label {
+    width: 60px;
+  }
+
+  header a,
+  header input,
   .menu input {
     background-size: 30px;
   }
