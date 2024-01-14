@@ -35,6 +35,10 @@ Authentication using `Devise` gem.
 Authorization using `CanCanCan` gem.
 Optimized queries with `bullet` gem.
 
+📌 **Live Demo:**
+- Check project live deployment (here)[https://grocery-budget.onrender.com]
+- Watch a presentation for the project from here (here)[https://www.loom.com/share/e9970e8839a74245b7e7c09fde7b441a]
+
 📌 **Tech Stack:**
 - Programming language is `Ruby`
 - Database used is `PostgreSQL`
