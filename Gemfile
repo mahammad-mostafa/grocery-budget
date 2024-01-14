@@ -57,7 +57,9 @@ group :development, :test do
   gem 'debug', platforms: %i[mri windows]
 
   gem 'bullet'
+  gem 'capybara'
   gem 'rspec-rails'
+  gem 'webdrivers'
 end
 
 group :development do
