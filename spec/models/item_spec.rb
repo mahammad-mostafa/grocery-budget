@@ -13,6 +13,10 @@ RSpec.describe Item, type: :model do
       item.name = ''
       expect(item).to_not(be_valid)
     end
+    it 'should not exceed 100 characters' do
+      item.name = 'a' * 1000
+      expect(item).to_not(be_valid)
+    end
   end
   describe 'amount attribute' do
     it 'should not be blank' do

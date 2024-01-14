@@ -13,6 +13,10 @@ RSpec.describe User, type: :model do
       user.name = ''
       expect(user).to_not(be_valid)
     end
+    it 'should not exceed 50 characters' do
+      user.name = 'a' * 100
+      expect(user).to_not(be_valid)
+    end
   end
   describe 'email attribute' do
     it 'should not be blank' do
