@@ -13,10 +13,18 @@ RSpec.describe Group, type: :model do
       group.name = ''
       expect(group).to_not(be_valid)
     end
+    it 'should not exceed 100 characters' do
+      group.name = 'a' * 1000
+      expect(group).to_not(be_valid)
+    end
   end
   describe 'icon attribute' do
     it 'should not be blank' do
       group.icon = ''
+      expect(group).to_not(be_valid)
+    end
+    it 'should not exceed 100 characters' do
+      group.name = 'a' * 1000
       expect(group).to_not(be_valid)
     end
   end
