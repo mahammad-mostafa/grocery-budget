@@ -3,7 +3,7 @@ class Group < ApplicationRecord
   validates :icon, presence: true
   belongs_to :user
   has_many :groups_items
-  has_many :items, through: :groups_items
+  has_many :items, -> { order(id: :desc) }, through: :groups_items
   def total
     items.reduce(0) { |total, element| total + element.amount }
   end
