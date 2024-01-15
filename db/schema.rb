@@ -23,11 +23,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_10_160937) do
     t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
-  create_table "groups_items", id: false, force: :cascade do |t|
+  create_table "groups_items", force: :cascade do |t|
     t.bigint "group_id", null: false
     t.bigint "item_id", null: false
-    t.index ["group_id", "item_id"], name: "index_groups_items_on_group_id_and_item_id"
-    t.index ["item_id", "group_id"], name: "index_groups_items_on_item_id_and_group_id"
+    t.index ["group_id"], name: "index_groups_items_on_group_id"
+    t.index ["item_id"], name: "index_groups_items_on_item_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -49,5 +49,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_10_160937) do
   end
 
   add_foreign_key "groups", "users"
+  add_foreign_key "groups_items", "groups"
+  add_foreign_key "groups_items", "items"
   add_foreign_key "items", "users", column: "author_id"
 end
