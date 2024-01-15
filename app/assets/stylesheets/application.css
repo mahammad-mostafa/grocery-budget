@@ -143,6 +143,7 @@ header label {
 header input {
   width: 50px;
   height: 100%;
+  cursor: pointer;
   background: url(/assets/menu.svg) transparent no-repeat right/20px;
 }
 
@@ -216,23 +217,28 @@ nav {
 }
 
 .menu li {
-  display: flex;
-  gap: 20px;
   padding: 20px 10px;
   background-color: var(--accent-color);
 }
 
 .menu li:first-of-type {
+  text-align: end;
+  padding: 10px;
   margin-bottom: -1px;
 }
 
 .menu input {
   width: 20px;
   height: 30px;
+  cursor: pointer;
   background: url(/assets/close.svg) transparent no-repeat center/20px;
   border: 0;
-  margin-inline-start: auto;
   margin-bottom: 20px;
+}
+
+.menu a {
+  display: flex;
+  gap: 20px;
 }
 
 .menu img {
