@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grocery Budget</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <%= render("partials/header") unless current_page?(root_path) %>
+    <main>
+      <% if notice %><ul class="success"><li><%= notice %></li></ul><% end %>
+      <% if alert %><ul class="errors"><li><%= alert %></li></ul><% end %>
+      <%= yield %>
+    </main>
+    <%= render("partials/menu") if user_signed_in? %>
+  </body>
+  <script>
+    const openMenu = () => {
+      document.querySelector('menu').classList.add('appear');
+      setTimeout(() => document.querySelector('menu').classList.add('visible'));
+    }
+    const closeMenu = () => {
+      document.querySelector('menu').classList.remove('visible');
+      setTimeout(() => document.querySelector('menu').classList.remove('appear'), 200);
+    }
+  </script>
+</html>

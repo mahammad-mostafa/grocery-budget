@@ -1,0 +1,6 @@
+<%= render(partial: "partials/errors") %>
+<%= form_with(model: @group) do |form| %>
+  <%= form.text_field :name, placeholder: "Name (required)" %>
+  <%= form.url_field :icon, placeholder: "Icon (required)" %>
+  <%= form.submit "Save", id: "action" %>
+<% end %>

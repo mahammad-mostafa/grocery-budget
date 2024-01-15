@@ -1,0 +1,10 @@
+<%= render(partial: "partials/errors") %>
+<%= form_with(model: @item) do |form| %>
+  <%= form.text_field :name, placeholder: "Name (required)" %>
+  <%= form.number_field :amount, min: 1, placeholder: "Amount (required)" %>
+  <%= form.label :group_ids, "Groups (at least one required)" %>
+  <div class="grid">
+    <%= form.collection_check_boxes :group_ids, Group.accessible_by(current_ability), :id, :name %>
+  </div>
+  <%= form.submit "Save", id: "action" %>
+<% end %>

@@ -1,0 +1,13 @@
+<section class="banner">
+  <h2><%= @group.name %></h2>
+  <span>$<%= @group.total %></span>
+</section>
+<ul class="list">
+  <%= @group.items.length.zero? ? render(partial: "partials/empty", locals: { name: "items" }) : render(partial: "items/item", collection: @group.items) %>
+</ul>
+<section class="button">
+  <%= link_to("Add a new item", new_item_path) %>
+<section>
+<script>
+  setTimeout(() => document.querySelector('.button').classList.add('visible', 'move'));
+</script>

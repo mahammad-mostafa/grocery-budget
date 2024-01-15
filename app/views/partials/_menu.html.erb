@@ -1,0 +1,10 @@
+<menu>
+  <nav>
+    <ul class="menu">
+      <li><input type="button" onclick="closeMenu();"/></li>
+      <li><a href="<%= groups_path %>"><img src="/assets/home.svg"/><span>Home</span></a></li>
+      <li><a href="<%= edit_user_registration_path %>"><img src="/assets/account.svg"/><span>Account</span></a></li>
+      <li><a href="<%= destroy_user_session_path %>" data-turbo-method="delete"><img src="/assets/logout.svg"/><span>Logout</span></a></li>
+    </ul>
+  </nav>
+</menu>
