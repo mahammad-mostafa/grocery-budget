@@ -1,0 +1,11 @@
+<header>
+  <div>
+    <span><%= link_to('', @previous) unless @previous.nil? %></span>
+    <h1><%= @title.class == Hash ? @title[controller_name] : @title %></h1>
+    <% if @action.nil? %>
+      <input type="button" onclick="openMenu();"/>
+    <% else %>
+      <label for="action"><%= @action %></label>
+    <% end %>
+  </div>
+</header>

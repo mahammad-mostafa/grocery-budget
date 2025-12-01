@@ -1,0 +1,9 @@
+<%= render "devise/shared/error_messages", resource: resource %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= f.text_field :name, placeholder: "Name (required)" %>
+  <%= f.email_field :email, autocomplete: "email", placeholder: "Email (required)" %>
+  <%= f.password_field :password, autocomplete: "new-password", placeholder: "New password (leave if password didn't change)" %>
+  <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "New password confirmation" %>
+  <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "Current password (to confirm changes)" %>
+  <%= f.submit "Update", id: "action" %>
+<% end %>
